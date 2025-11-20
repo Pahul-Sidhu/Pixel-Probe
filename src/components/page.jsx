@@ -21,7 +21,7 @@ export default function UxLens() {
 
     useEffect(() => {
         const fetchSession = async () => {
-            const res = await fetch("https://pixel-probe.onrender.com/api/start", {
+            const res = await fetch("https://pixel-probe-backend.onrender.com/api/start", {
                 method: "POST",
             });
             const data = await res.json();
@@ -90,7 +90,7 @@ export default function UxLens() {
         try {
             const base64ProdImage = await toBase64(prodImage);
             const base64DesignImage = await toBase64(designImage);
-            const response = await fetch("https://pixel-probe.onrender.com/api/analyze", {
+            const response = await fetch("https://pixel-probe-backend.onrender.com/api/analyze", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -144,7 +144,7 @@ export default function UxLens() {
             return;
         }
 
-        const res = await fetch("https://pixel-probe.onrender.com/api/screenshot", {
+        const res = await fetch("https://pixel-probe-backend.onrender.com/api/screenshot", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
