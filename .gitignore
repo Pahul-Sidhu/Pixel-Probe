@@ -24,3 +24,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+dist/
+build/
+
+# Playwright
+test-results/
+playwright-report/
