@@ -44,6 +44,7 @@ export default function UxLens() {
     }
 
     const compareDesigns = async () => {
+        setPreviewImage(null);
         setLoading(true);
         if (!designImage) {
             toast.error("Please upload a design screenshot first.", {
@@ -119,6 +120,7 @@ export default function UxLens() {
             }
 
             setComparisonResult(result.comparison || result);
+            setAnalysisResult(null);
             setLoading(false);
             console.log("Server response:", result);
         } catch (err) {
